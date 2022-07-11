@@ -81,7 +81,7 @@ function calculateAll() {
 
     document.getElementById("subtotal").innerText = totalPrice;
 
-    const tax = Math.round(totalPrice * 0.1);
+    const tax = totalPrice * 0.05;
     document.getElementById("tax").innerText=tax;
 
     const grandtottal = totalPrice+tax;
