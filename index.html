@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Shopping</title>
+     <!-- Bootstrap CSS -->
+     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
+
+     <!-- Font awsome css -->
+     <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.11.2/css/all.css" rel="stylesheet" />
+
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<section>
+    <div class="container" id="shoppingcart">
+        <div class="cart">
+           <div class="col-md-12 col-lg-10 mx-auto" id="itemswrapper">
+              <div class="cart-item" id="item1">
+                 <div class="row">
+                    <div class="col-md-7 center-item">
+                       <img src="data:image/jpeg;base64,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" alt="">
+                       <h5>iPhone 11 128GB Black</h5>
+                    </div>
+
+                    <div class="col-md-5 center-item">
+                       <div class="input-group number-spinner">
+                          <button onclick="handleProductChange('phone',false)" class="btn btn-default item-increment"><i class="fas fa-minus"></i></button>
+                          <input id="phone-input" type="text" class="form-control text-center" value="1">
+                          <button onclick="handleProductChange('phone',true)" class="btn btn-default"><i class="fas fa-plus"></i></button>
+                       </div>
+                       <h5>$<span id="phone-total">12</span></h5>
+                       <img id="removeItem1" src="delete.png" alt="" class="remove-item">
+                    </div>
+                    
+                 </div>
+              </div>
+
+              <div class="cart-item" id="item2">
+               <div class="row">
+                  <div class="col-md-7 center-item mx-auto">
+                     <img src="https://store.storeimages.cdn-apple.com/4982/as-images.apple.com/is/iphone-13-pro-family-hero?wid=940&hei=1112&fmt=png-alpha&.v=1644969385433" alt="">
+                     <h5>iPhone 13 pro - Silver</h5>
+                  </div>
+                  <div class="col-md-5 center-item">
+                     <div class="input-group number-spinner">
+                        <button onclick="handleProductChange('case',false)" class="btn btn-default"><i class="fas fa-minus"></i></button>
+                        <input readonly id="case-input" type="text" class="form-control text-center" value="1">
+                        <button onclick="handleProductChange('case',true)" class="btn btn-default"><i class="fas fa-plus"></i></button>
+
+                     </div>
+                     <h5>$<span id="case-total">59</span></h5>
+                     <img id="removeItem2" src="delete.png" alt="" class="remove-item">
+                  </div>
+               </div>
+            </div>
+
+              <div class="cart-item">
+                <div class="row">
+                <div class="col-md-8">
+                    <h5>Subtotal: </h5>
+                    <h5>Tax (5% of Subtotal):</h5>
+                    <h5>Total:</h5>
+                </div>
+                <div class="col-md-4">
+                    <h5>$<span id="subtotal">0</span></h5>
+                        <h5>$<span id="tax">0</span></h5>
+                        <h5>$<span id="total">0</span></h5>
+                </div>
+                </div>
+              </div>
+
+              <div class="col-md-12 pt-4 pb-4">
+                <button id="checkoutbtn" type="button" class="btn btn-success check-out">Check Out</button>
+             </div>
+
+</section>
+
+</body>
+    
+
+    <script src="app.js"></script>
+</body>
+</html>
